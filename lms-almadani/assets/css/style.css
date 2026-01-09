@@ -1,0 +1,155 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Warna Identitas SMK Al Madani */
+.bg-almadani {
+    background-color: #006400; /* Hijau Tua */
+    color: white;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-top: 5px solid #006400;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; /* Agar padding tidak merusak lebar */
+    margin-top: 5px;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    background-color: #006400;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-login:hover {
+    background-color: #004d00;
+}
+
+/* --- TAMBAHAN UNTUK LANDING PAGE (NAVBAR & FOOTER) --- */
+
+/* Navbar */
+.navbar {
+    background-color: #006400; /* Hijau Al Madani */
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: #ffeb3b; /* Kuning saat hover */
+}
+
+/* Layout Landing Page (Split Screen) */
+.landing-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 40px;
+    padding: 20px;
+    align-items: center; /* Vertikal center */
+}
+
+/* Bagian Kiri: Profil Sekolah */
+.profil-sekolah {
+    flex: 1; /* Mengambil sisa ruang */
+    padding-right: 20px;
+}
+.profil-sekolah h1 {
+    color: #006400;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.profil-sekolah p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.btn-cta {
+    display: inline-block;
+    background: #f39c12;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Bagian Kanan: Form Login (Override style lama) */
+.login-wrapper {
+    flex: 0 0 400px; /* Lebar tetap 400px */
+}
+.login-box-new {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid #006400;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 5px solid #f39c12;
+}
+
+/* Responsif untuk HP (Layar kecil jadi tumpuk ke bawah) */
+@media (max-width: 768px) {
+    .landing-container {
+        flex-direction: column;
+    }
+    .navbar {
+        padding: 15px 20px;
+    }
+    .login-wrapper {
+        width: 100%;
+        flex: none;
+    }
+}
